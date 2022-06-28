@@ -4,7 +4,7 @@ function renderHeader() {
     const $header = document.createElement('div');
     $header.id = 'nav';
 
-    $header.appendChild(createHTMLElement('p', null, null, 'test element'));
+    $header.appendChild(createHTMLElement('p', null, ['test'], 'test element'));
 
     $frame.appendChild($header);
 }

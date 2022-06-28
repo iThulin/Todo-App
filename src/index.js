@@ -1,7 +1,6 @@
 import { renderHeader } from './Javascript modules/renderHeader';
-
-import './CSS/reset.css';
-import './CSS/style.css';
+import './CSS/reset.sass';
+import './CSS/styles.sass';
 
 // Creates a skeleton to hold all other generated content on the app.
 
