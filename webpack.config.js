@@ -14,7 +14,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Caching',
+      title: 'ToDo',
     }),
 ].concat(devMode ? [] : [new MiniCssExtractPlugin()]),
   output: {
