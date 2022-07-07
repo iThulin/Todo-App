@@ -1,6 +1,7 @@
 import { renderHeader } from './Javascript modules/renderHeader';
 import { renderSidebar } from './Javascript modules/renderSidebar';
-import { renderMain } from './Javascript modules/renderMain';
+import { renderMain, renderTask } from './Javascript modules/renderMain';
+import { newTask } from './Javascript modules/taskLogic';
 import './CSS/styles.sass';
 
 // Creates a skeleton to hold all other generated content on the app.
@@ -22,14 +23,21 @@ function createHTMLElement(type, id, classes, content) {
   return element;
 };
 
+function setButtonEvents() {
+  // sets the on click event for all buttons rendered by other elements
+  document.getElementById('newTask').onclick = function() {renderTask('test');}
+}
+
 function renderHomepage() {
   console.log('Render Homepage')
   renderHeader();
   renderSidebar();
   renderMain();
+  setButtonEvents();
 }
 
 
 renderHomepage();
+
 
 export { createHTMLElement, $frame };
