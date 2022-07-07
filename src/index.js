@@ -1,6 +1,6 @@
 import { renderHeader } from './Javascript modules/renderHeader';
 import { renderSidebar } from './Javascript modules/renderSidebar';
-
+import { renderMain } from './Javascript modules/renderMain';
 import './CSS/styles.sass';
 
 // Creates a skeleton to hold all other generated content on the app.
@@ -26,6 +26,7 @@ function renderHomepage() {
   console.log('Render Homepage')
   renderHeader();
   renderSidebar();
+  renderMain();
 }
 
 

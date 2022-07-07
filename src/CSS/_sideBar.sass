@@ -1,7 +1,7 @@
 @use 'foundation/variables' as v
 
 #sideBar
-    height: 95%
+    height: 90%
     width: 20%
     @include v.color-scheme(v.$scheme-secondary ...)
     display: flex
@@ -10,6 +10,8 @@
     padding-top: 2rem
     gap: 2rem
     align-items: center
+    position: absolute
+    z-index: 1
 
 .Header
     font-size: 2rem
