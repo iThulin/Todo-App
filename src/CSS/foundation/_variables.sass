@@ -1,15 +1,32 @@
 // Variables
 
+@use 'sass:list'
+
 // Main color scheme
-$lightShade: #f4f5f2
-$lightAccent: #a7d1d4
-$mainBrand: #53b3c4
-$darkAccent: #8e9098
-$darkShade: #2b70b3
+$color-nuetral-light: #f6f5f6
+$color-accent: #53b3c4
+$color-primary: #dfc8a2
+$color-secondary: #AC5246
+$color-nuetral-dark: #322623
+
 
 // Semantic color scheme
-$default: #53b3c4
-$info: #2b70b3
-$success: #4eb073
-$warning: #cba03b
-$danger: #f44336
+$color-default: #53b3c4
+$color-info: #322623
+$color-success: #78b768
+$color-warning: #f5a630
+$color-danger: #f44336
+
+$scheme-default: $color-nuetral-dark, $color-primary
+$scheme-secondary: $color-nuetral-light, $color-secondary
+$scheme-nuetral: $color-nuetral-dark, $color-nuetral-light
+
+@mixin color-scheme($text, $bg)
+    // if we have a single bg color, then set a background-color
+    // if we have multiple bg colors, then set a gradient for background-color
+    @if list.length($bg) == 1
+        background-color: $bg
+    @else 
+        background-image: linear-gradient(to top left, $bg)
+    background-color: $bg
+    color: $text

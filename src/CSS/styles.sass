@@ -1,7 +1,9 @@
 @use 'foundation'
 @use 'header'
 @use 'sideBar'
+@use 'foundation/variables' as v
 
 #frame
+    @include v.color-scheme(v.$scheme-nuetral ...)
     height: 100vh
     width: 100vw

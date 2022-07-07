@@ -1,9 +1,9 @@
 @use 'foundation/variables' as v
 
 #nav
+    @include v.color-scheme(v.$scheme-default ...)
     height: 10%
     width: 100%
-    background-color: v.$mainBrand
     display: flex
     flex-direction: row
     justify-content: space-between
@@ -36,7 +36,7 @@
     left: 0
     right: 0
     bottom: 0
-    background-color: v.$lightShade
+    @include v.color-scheme(v.$scheme-secondary ...)
     -webkit-translation: .4s
     transition: .4s
 
@@ -47,15 +47,15 @@
     width: 26px
     left: 4px
     bottom: 4px
-    background-color: v.$mainBrand
+    @include v.color-scheme(v.$scheme-default ...)
     -webkit-transition: .4s
     transition: .4s
 
 input:checked + .slider
-    background-color: v.$darkAccent
+    @include v.color-scheme(v.$color-primary, v.$color-nuetral-dark)
 
 input:focus + .slider
-    box-shadow: 0 0 1px v.$lightShade
+    @include v.color-scheme(v.$scheme-secondary ...)
 
 input:checked + .slider:before
     -webkit-transform: translateX(26px)
