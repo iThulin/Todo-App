@@ -62,6 +62,7 @@
     position: absolute
     height: 25vh
     width: 25vw
+    padding: 1%
     z-index: 9
     top: 50%
     left: 50%
@@ -70,10 +71,14 @@
     flex-direction: column
     justify-content: space-evenly
     @include v.color-scheme(v.$scheme-default ...)
+    border: 2px solid v.$color-nuetral-dark
+    box-shadow: 10px 10px 10px v.$color-nuetral-dark
 
 #taskButtonContainer
     position: fixed
     top: 10vh
+    left: 50%
+    transform: translateX(-50%)
     display: flex
     gap: 5vh
     height: 5vh
@@ -84,3 +89,4 @@
     width: auto
     @include v.color-scheme( v.$scheme-secondary ...)
     font-size: 1.5rem
+    box-shadow: 5px 5px 5px v.$color-nuetral-dark

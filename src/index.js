@@ -44,7 +44,6 @@ function renderHomepage() {
   console.log('Render Homepage')
   renderHeader();
   renderMain();
-  renderSidebar();
   setButtonEvents();
 }
 
