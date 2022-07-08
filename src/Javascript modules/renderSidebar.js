@@ -1,4 +1,4 @@
-import { createHTMLElement, $frame } from "../index.js";
+import { createHTMLElement } from "../index.js";
 
 function renderSidebar() {
     // Create main div and set id
@@ -26,8 +26,8 @@ function renderSidebar() {
     // Create Categories section
 
 
-    
-    $frame.appendChild($sidebar);
+    const $main = document.getElementById('main');
+    $main.appendChild($sidebar);
 }
 
 export { renderSidebar };

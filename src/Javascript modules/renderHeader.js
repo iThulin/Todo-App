@@ -8,9 +8,10 @@ function renderHeader() {
 
     // Create the menu collapse button
     $header.appendChild(createHTMLElement('button', 'menuToggle',));
+    
 
     // Create the title
-    $header.appendChild(createHTMLElement('h1', 'title', null, 'Simple To Do'));
+    $header.appendChild(createHTMLElement('h1', 'title', null, 'Task.io'));
 
     // Create the color scheme toggle
     const $label = document.createElement('label')

@@ -1,6 +1,6 @@
 import { renderHeader } from './Javascript modules/renderHeader';
 import { renderSidebar } from './Javascript modules/renderSidebar';
-import { renderMain, renderTask } from './Javascript modules/renderMain';
+import { createTask, renderMain, renderTask } from './Javascript modules/renderMain';
 import { newTask } from './Javascript modules/taskLogic';
 import './CSS/styles.sass';
 
@@ -23,16 +23,28 @@ function createHTMLElement(type, id, classes, content) {
   return element;
 };
 
+function toggleSideBar() {
+  if(document.getElementById('sideBar')) {
+    console.log('Delete sidebar');
+    document.getElementById('sideBar').remove();
+  }
+  else {
+    renderSidebar();
+  }
+}
+
 function setButtonEvents() {
   // sets the on click event for all buttons rendered by other elements
-  document.getElementById('newTask').onclick = function() {renderTask('test');}
+  document.getElementById('newTask').onclick = function() {createTask();};
+  document.getElementById('load').onclick = function() {renderTask('test');};
+  document.getElementById('menuToggle').onclick = function() {toggleSideBar();};
 }
 
 function renderHomepage() {
   console.log('Render Homepage')
   renderHeader();
-  renderSidebar();
   renderMain();
+  renderSidebar();
   setButtonEvents();
 }
 
