@@ -33,8 +33,9 @@
 
 .task-element
     color: black
-    height: 1rem
+    height: 1.25rem
     width: auto
+    font-size: 18px
 
 #buttonContainer
     width: auto
@@ -45,23 +46,20 @@
     align-items: center
 
 #Edit, #Remove
-    height: 1.25rem
+    height: 1.5rem
     width: auto
+    font-size: 18px
     border: 1px solid black
-
-#Edit
-    @include v.color-scheme(v.$color-nuetral-dark, v.$color-warning)
-
-#Remove
-    @include v.color-scheme(v.$color-nuetral-dark, v.$color-danger)
+    @include v.color-scheme( v.$scheme-secondary ...)
 
 #Edit:hover, #Remove:hover
     @include v.color-scheme(v.$color-nuetral-dark, v.$color-accent)
 
 #pendingTask
     position: absolute
-    height: 25vh
+    height: auto
     width: 25vw
+    gap: 7.5px
     padding: 1%
     z-index: 9
     top: 50%
@@ -90,3 +88,33 @@
     @include v.color-scheme( v.$scheme-secondary ...)
     font-size: 1.5rem
     box-shadow: 5px 5px 5px v.$color-nuetral-dark
+
+.task-input
+    height: 1.5em
+    font-size: 1.25rem
+    background-color: v.$color-nuetral-light
+    border: 1px solid v.$color-nuetral-dark
+    box-shadow: 2px 2px 1px v.$color-nuetral-dark
+
+#Notes
+    height: 5em
+
+#formButtons
+    height: 2.5rem
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+#Submit, #discard
+    height: auto
+    width: auto
+    font-size: 1.5rem
+    box-shadow: 2px 2px 1px v.$color-nuetral-dark
+
+#Submit
+    @include v.color-scheme (  v.$color-nuetral-dark, v.$color-success )  
+
+#discard
+    @include v.color-scheme( v.$scheme-secondary ...)
+    //@include v.color-scheme (  v.$color-nuetral-dark, v.$color-danger )  

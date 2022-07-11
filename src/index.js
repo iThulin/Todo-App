@@ -1,8 +1,9 @@
 import { renderHeader } from './Javascript modules/renderHeader';
 import { renderSidebar } from './Javascript modules/renderSidebar';
-import { createTask, renderMain, renderTask } from './Javascript modules/renderMain';
-import { newTask } from './Javascript modules/taskLogic';
+import { renderMain, renderTask } from './Javascript modules/renderMain';
+import { createTask } from './Javascript modules/taskLogic';
 import './CSS/styles.sass';
+import { currentProjects } from './Javascript modules/projectLogic';
 
 // Creates a skeleton to hold all other generated content on the app.
 
@@ -35,7 +36,7 @@ function toggleSideBar() {
 
 function setButtonEvents() {
   // sets the on click event for all buttons rendered by other elements
-  document.getElementById('newTask').onclick = function() {createTask();};
+  document.getElementById('newTask').onclick = function() {createTask(currentProjects);};
   document.getElementById('load').onclick = function() {renderTask('test');};
   document.getElementById('menuToggle').onclick = function() {toggleSideBar();};
 }

@@ -17,38 +17,6 @@ function renderMain() {
     $main.appendChild($mainContainer);
 }
 
-function createTask() {
-    let form = document.createElement('form');
-    form.id = 'pendingTask';
-    //form.setAttribute('method', 'post');
-    //form.setAttribute('action', '#');
-
-    let taskTitle = document.createElement('input');
-    taskTitle.setAttribute('placeholder', 'Title');
-    form.appendChild(taskTitle);
-    
-    let taskProject = document.createElement('input');
-    taskProject.setAttribute('placeholder', 'Project');
-    form.appendChild(taskProject);
-
-    let taskPriority = document.createElement('input');
-    taskPriority.setAttribute('placeholder', 'Priority');
-
-    let dueDate = document.createElement('input');
-    dueDate.setAttribute('type', 'date');
-    form.appendChild(dueDate);
-
-    let taskRecurring = document.createElement('input');
-    taskRecurring.setAttribute('placeholder', 'Recurring');
-    form.appendChild(taskRecurring);
-
-    let taskNotes = document.createElement('input');
-    taskNotes.setAttribute('placeholder', 'Notes');
-    form.appendChild(taskNotes);
-      
-    document.body.appendChild(form);
-}
-
 function renderTask(object) {
     let task = createHTMLElement('div', null, ['task'], null);
 
@@ -70,4 +38,4 @@ function renderTask(object) {
     $mainContainer.appendChild(task);
 }
 
-export { renderMain, renderTask, createTask };
+export { renderMain, renderTask };
