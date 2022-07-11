@@ -1,0 +1,47 @@
+@use 'foundation/variables' as v 
+
+#pendingTask
+    position: absolute
+    height: auto
+    width: 25vw
+    gap: 7.5px
+    padding: 1%
+    z-index: 9
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    @include v.color-scheme(v.$scheme-default ...)
+    border: 2px solid v.$color-nuetral-dark
+    box-shadow: 10px 10px 10px v.$color-nuetral-dark
+
+.task-input
+    height: 1.5em
+    font-size: 1.25rem
+    background-color: v.$color-nuetral-light
+    border: 1px solid v.$color-nuetral-dark
+    box-shadow: 2px 2px 1px v.$color-nuetral-dark
+
+#Notes
+    height: 5em
+
+#formButtons
+    height: 2.5rem
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+#Submit, #discard
+    height: auto
+    width: auto
+    font-size: 1.5rem
+    box-shadow: 2px 2px 1px v.$color-nuetral-dark
+
+#Submit
+    @include v.color-scheme (  v.$color-nuetral-dark, v.$color-success )  
+
+#discard
+    @include v.color-scheme( v.$scheme-secondary ...)  
