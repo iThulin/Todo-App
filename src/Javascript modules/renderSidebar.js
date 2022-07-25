@@ -1,33 +1,41 @@
 import { createHTMLElement } from "../index.js";
 
 function renderSidebar() {
-    // Create main div and set id
-    const $sidebar = document.createElement('div');
-    $sidebar.id = 'sideBar';
+  // Create main div and set id
+  const $sidebar = document.createElement("div");
+  $sidebar.id = "sideBar";
 
-    // Create Today section
-    const $todayContainer = createHTMLElement('div', 'todayContainer');
-    $sidebar.appendChild($todayContainer);
+  // Create Today section
+  const $todayContainer = createHTMLElement("div", "todayContainer");
+  $sidebar.appendChild($todayContainer);
 
-    $todayContainer.appendChild(createHTMLElement('button', null, ['Header'], 'Today'));
-   
-    // Create Top Priority section
-    const $topPriorityContainer = createHTMLElement('div', 'topPriorityContainer')
-    $sidebar.appendChild($topPriorityContainer);
+  $todayContainer.appendChild(
+    createHTMLElement("button", null, ["Header"], "Today")
+  );
 
-    $topPriorityContainer.appendChild(createHTMLElement('button', null, ['Header'], 'Top Priority'));
+  // Create Top Priority section
+  const $topPriorityContainer = createHTMLElement(
+    "div",
+    "topPriorityContainer"
+  );
+  $sidebar.appendChild($topPriorityContainer);
 
-    // Create Projects section
-    const $projectsContainer = createHTMLElement('div', 'Projects');
-    $sidebar.appendChild($projectsContainer)
+  $topPriorityContainer.appendChild(
+    createHTMLElement("button", null, ["Header"], "Top Priority")
+  );
 
-    $projectsContainer.appendChild(createHTMLElement('button', null, ['Header'], 'Projects'));
+  // Create Projects section
+  const $projectsContainer = createHTMLElement("div", "Projects");
+  $sidebar.appendChild($projectsContainer);
 
-    // Create Categories section
+  $projectsContainer.appendChild(
+    createHTMLElement("button", null, ["Header"], "Projects")
+  );
 
+  // Create Categories section
 
-    const $main = document.getElementById('main');
-    $main.appendChild($sidebar);
+  const $main = document.getElementById("main");
+  $main.appendChild($sidebar);
 }
 
 export { renderSidebar };

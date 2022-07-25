@@ -1,3 +1,3 @@
-let currentProjects = ['No project']
+let currentProjects = ["No project"];
 
 export { currentProjects };
